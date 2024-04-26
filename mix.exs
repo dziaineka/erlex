@@ -9,6 +9,7 @@ defmodule Erlex.MixProject do
       app: :erlex,
       version: @version,
       elixir: "~> 1.6",
+      compilers: [:yecc, :leex] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       description: description(),
